@@ -1,0 +1,40 @@
+Hii
+
+C:\Users\RajkumarRk>d:
+
+D:\>cd Edex
+
+D:\Edex>cd JavaVs
+
+D:\Edex\JavaVS>cd Filecmd
+
+D:\Edex\JavaVS\Filecmd>dir
+ Volume in drive D is Vasanth
+ Volume Serial Number is C098-126C
+
+ Directory of D:\Edex\JavaVS\Filecmd
+
+07-11-2023  11:43    <DIR>          .
+07-11-2023  11:43    <DIR>          ..
+07-11-2023  11:43                 4 data.txt
+               1 File(s)              4 bytes
+               2 Dir(s)  160,805,687,296 bytes free
+
+
+D:\Edex\JavaVS\Filecmd>notepad data.txt
+
+D:\Edex\JavaVS\Filecmd>notepad .\data.txt
+
+D:\Edex\JavaVS\Filecmd>notepad ./data.txt
+
+D:\Edex\JavaVS\Filecmd>notepad ../data.txt
+
+D:\Edex\JavaVS\Filecmd>cd..
+
+D:\Edex\JavaVS>cd Filecmd
+
+D:\Edex\JavaVS\Filecmd>cd ../Filecmd2
+
+D:\Edex\JavaVS\Filecmd2>cd ../Filecmd
+
+D:\Edex\JavaVS\Filecmd>notepad ../Filecmd2/data2.txt

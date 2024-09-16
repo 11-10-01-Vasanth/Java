@@ -1,0 +1,351 @@
+***   JAVA   *** (platform independant) -> write once, run anywhere --> owned bt oracle
+
+J2SE - Standard edition - Client sided applications
+J2EE - Enterprise edition - Server sided applications
+J2ME - Android application - Micro/Mobile edition
+
+.class file - created after compilation of (.java file)
+
+java -> javac -> JVM(Bytecode) 
+
+javac filename.java  ->   filename.class
+java filename  -> Output
+
+***   If class is Public then filename is as a Classname  ***
+
+Varaible -> Store the value in memory location
+
+Datatypes:
+
+	Primitive:
+
+		Numeric ->	Integer -> int,byte,long,short
+				Floating Point -> float,double
+		Non-Numeric ->	boolean,char
+
+	Non-Primitive:
+
+		String, Array
+
+Components of Java Architecture:
+
+The Java architecture includes the three main components:
+
+	->Java Virtual Machine (JVM)
+	->Java Runtime Environment (JRE)
+	->Java Development Kit (JDK)
+
+//////////////////////
+
+Interpreter:
+
+Interpreter is a computer program that converts the high-level program statement into Assembly-level language. 
+It converts the code into machine code when the program is run.
+Java can be considered both a compiled and an interpreted language because its source code is first compiled into a binary byte-code. This byte-code runs on the Java Virtual Machine (JVM), which is usually a software-based interpreter
+An Interpreter directly executes instructions written in a programming or scripting language without previously converting them to an object code or machine code
+
+Compiler:
+
+A compiler takes entire program and converts it into object code which is typically stored in a file. The object code is also referred as binary code and can be directly executed by the machine after linking
+
+High level vs Low level:
+
+High-level languages include Python, Java, C++, and JavaScript, among others. Low-level languages encompass assembly languages and machine code directly understandable by computer hardware, as well as languages like C and C++ that offer more control while retaining some high-level abstractions.
+Some examples of high-level languages include:
+Java, C, C++, Python, Perl, BASIC, COBOL, Pascal, and Ruby.
+
+
+
+
+/////////////////////
+
+
+Type casting :
+
+	Implicit :	small btye data type -> large btye data type
+
+		double d = 2.3;
+		int i = d;
+
+	Explicit :
+
+		int i=1;
+		double d = (int)i;
+
+Scope :
+
+	* Local scope : Access within a block
+	* Global scope : Access in all blocks
+
+
+Class -> Is a blueprint(idea) of object
+
+    * It includes varaibles amd functions/methods
+    * Definition of object
+
+Object -> Working entity of Class
+
+    * Functionality/Behaviour
+    * Attribute -> Refers to state of object
+
+Private :
+
+    Private varaibles cant access to outside the class  (private int a = 5;)
+
+Function Overloading :
+
+    Function having same name but different arguments
+
+Garbage Collector :
+
+	Destroys an object if its needed  no anymore
+
+
+Constructor :
+
+	* Having same name as Class(Default constructor)
+	* Constructor can call when object is created
+	* Constructor doesnt have return type
+
+	class C
+	{
+		C()
+		{
+			//Constructor
+		}
+		int add()
+		{
+
+		}
+	}
+
+	public class Recursion 
+	{
+		public static void main(String[] args)
+		{
+			C c;         // Constructor call
+			c = new C();
+			c = new C().add();
+		}
+	}
+
+Final :
+
+	* Final varaibles are constant and also cannot be reassign
+	* Final methods cannot be Override
+	* Final class cannot be inherit
+	* Final keyword is used only in defined methods
+
+Static :
+
+	* It shares common memory 
+	* Declare variable inside static method is static variable
+	* Static methods can be called by its Classname
+
+	class a
+	{
+		private static int amnt;
+		public void setcount(int amnt)
+		{
+			this.amnt = this.amnt + amnt;
+		}
+		public void getcount()
+		{
+			return amnt;
+		}
+	}
+	class main
+	{
+		psvm(s a[])
+		{
+			a a1 = new a();
+			a1.setcount(3);
+			a1.setcount(3);
+			a a2 = new a();
+			a2.setcount(3);
+			System.out.println(a1.getcount());
+		}
+	}
+
+
+Enum : Ennumeration 
+
+	enum enum_name{
+		val_1,
+		val_2,
+		...
+	}
+
+enum_class.values();  -->  Array
+
+
+OOPS :
+
+1) Encapsulation
+        Binding variables and methods together
+        Access variables only through methods
+        POJO method(Plain Old Java Method)
+
+
+    class A
+{
+	private String name;
+	void setName(String n)
+	{
+		name = n;
+	}
+	String getName()
+	{
+		return name;
+	}
+}
+
+public class Encapsulation 
+{
+	public static void main(String[] args) 
+	{
+		A a = new A();
+		a.setName("Vasanth");
+		System.out.println(a.getName());
+	}
+}
+
+
+2) Inheritance :  Supports Single Inheritance
+
+	* Single
+	* Multi level -> Chains of single Inheritance 
+	* Hierarchical 
+	* Multiple(X)
+	* Hybrid(X)
+
+
+3) Abstraction :
+
+	* Object cannot be created for abstract classes
+	* Create object only by inheriting the abstract class and overriding the abstract methods
+	* Setting a template
+
+	abstract class A
+	{
+		public abstract void start();	
+	}
+
+	class B extends A
+	{
+		public void start()
+		{
+
+		}
+	}	
+
+Packages :
+
+	Way of organize the JAVA code
+
+Wrapper Class :
+
+	Purely object oriented
+
+	int   	 Interger
+	double 	 Double
+	float	 Float
+	boolean  Boolean
+	long	 Long
+	
+
+	Boxing :
+
+	* Integer i = new IntegerValue();
+	* int x = i;   // Unboxing
+		i = x + 10;	//Boxing
+
+
+Interface :
+
+	* Pure abstract class
+	* Undefined methods
+	
+
+GUI - Graphical User Interface
+
+	awt - Abstract Window Toolkit
+	Swing Package
+
+	Frame class -> For Window
+	setVisible() -> To window Visible
+	setSize(width,height) -> Window Size
+	Button class -> To create Button
+	add() -> To add Components
+
+
+Exception :
+
+	1) Built-in Exception :
+
+	Unchecked exception -> While Running a code
+	Checked exception -> While Compiling a code (** try catch block must)
+
+
+File :
+
+	Absolute path : d:\downloads\prgm
+	Relative path : 
+
+
+Binary Mode classes :
+
+	FileInputSream
+	FileOutputStream
+	DataInputStream
+	
+try With resource :
+
+	Class which inherit Closa
+	ble can only used inside a try() 
+	try()
+	{
+
+	}
+	catch (Exception e)
+	{
+
+	}
+
+Multi Threading :
+
+	Instructions/Commands loaded by the ram memory are processed by CPU, then it will be a ACTIVE PROGRAM
+
+	Thread : is a SUB process
+	
+	Combination of threads are called 'MultiThreading'
+
+	A CPU is capable of running one Instruction at a time(Round robin method)
+
+	Executing Multiple programs at a time is called MULTI TASKING
+
+why?
+
+	Effective utilization of CPU cycle
+
+	Steps to multithread: 
+	1. Inheriting the Thread class
+	2. Override the run method
+	3. Place the code wich should be executed as Multi threaded
+	4. Call the Start() method to execute the run method
+
+
+****      Thread class is only entend for single class to multi thread   ****
+
+Data Structure :
+
+	Data are aligned in a manner to achieve a certain logic
+
+	Queue : FIFO - First in last out 
+	Stack : LIFO - Last in first out
+			FILO - First in last out
+
+Collection : (generic class)
+
+	classname<type> obj = new classname<>; (or)
+	classname<type> obj = new classname<type>;
